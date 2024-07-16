@@ -7,12 +7,36 @@
 </head>
 <body>
     <h1> sum calculator </h1>
-    <div>
+    <div style="display: flex;">
     <input type="text" name="" id="num1"/></br>
     <input type="text" name="" id="num2"/></br>
     <button type="button" onclick="calculate()">calculate</button>
+    <br>
+    <br>
 </div>
-    <script src="body.js"></script>
+<br>
+<input type="number" id="table">
+<button onclick="printLoopTableOnHtml()">print table</button>
+<div id="result"></div>
+
+<script>
+    function printlooptableOnHtml(){  
+          let getNumber = document.querySelector("#table").value
+           document.querySelector("#result").innerHTML =  "";
+          for(let a =1; a <=10 ;a++){
+      document.querySelector("#result").innerHTML +=` ${getNumber} x ${a} =  ${ a * getNumber}<br/>`; 
+        }} 
+    </script>
+
+<script>
+    function calculate(){
+        const num1 = document.querySelector("#num1").value;
+        const num2 = document.querySelector("#num2").value;
+      
+        const result = +num1 + +num2
+        console.log(result)
+    }
+</script>
     
 </body>
 </html>

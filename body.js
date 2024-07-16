@@ -5,3 +5,9 @@ function calculate(){
     const result = +num1 + +num2
     console.log(result)
 }
+function printtableOnHtml(){  
+    let getNumber = document.querySelector("#table").value
+     document.querySelector("#result").innerHTML =  "";
+    for(let a =1; a <=10 ;a++){
+document.querySelector("#result").innerHTML +=` ${getNumber} x ${a} =  $ { a * getNumber}<br/>` 
+  }}
